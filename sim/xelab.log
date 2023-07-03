@@ -1,0 +1,37 @@
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab tb_top --relax -s top --debug typical 
+Multi-threading is on. Using 6 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'PADDR' [/home/husni/Projects/APB2SPI/tb/tb_top/tb_top.sv:39]
+WARNING: [VRFC 10-3597] non-void function 'get' called as a task without void casting [/home/husni/Projects/APB2SPI/tb/test_lib/apb2spi_base_test.sv:25]
+WARNING: [VRFC 10-3597] non-void function 'get' called as a task without void casting [/home/husni/Projects/APB2SPI/tb/test_lib/apb2spi_base_test.sv:29]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/proj/xbuilds/SWIP/9999.0_0805_2155/installs/lin64/Vivado/2022.1/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/proj/xbuilds/SWIP/9999.0_0805_2155/installs/lin64/Vivado/2022.1/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4468] File : /proj/xbuilds/SWIP/9999.0_0805_2155/installs/lin64/Vivado/2022.1/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv, Line : 25994, RANDC variable size more than 8 bits. This will be treated as a RAND variable instead.
+WARNING: [XSIM 43-4099] "/home/husni/Projects/APB2SPI/Parameters/test_param_pkg.sv" Line 1. Module test_param_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/husni/Projects/APB2SPI/Parameters/test_param_pkg.sv" Line 1. Module test_param_pkg doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.apb_agent_pkg
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package work.spi_agent_pkg
+Compiling package work.test_param_pkg
+Compiling package work.apb2spi_test_pkg
+Compiling package work.apb2spi_env_pkg
+Compiling package work.vseq_pkg
+Compiling package work.apb_seq_pkg
+Compiling package work.spi_seq_pkg
+Compiling module work.spi_interface_default
+Compiling module work.apb_interface_default
+Compiling module work.APB_DRIVER_BFM_default
+Compiling module work.SPI_DRIVER_BFM
+Compiling module work.spi_clgen
+Compiling module work.spi_shift
+Compiling module work.spi_top
+Compiling module work.tb_top
+Built simulation snapshot top

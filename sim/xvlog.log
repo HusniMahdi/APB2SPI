@@ -1,0 +1,23 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/Parameters/test_param_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/tb/defines/def.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/rtl/timescale.v" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/rtl/spi_defines.v" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/rtl/spi_clgen.v" into library work
+INFO: [VRFC 10-311] analyzing module spi_clgen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/rtl/spi_shift.v" into library work
+INFO: [VRFC 10-311] analyzing module spi_shift
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/rtl/spi_top.v" into library work
+INFO: [VRFC 10-311] analyzing module spi_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/tb/tb_top/apb_interface.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/tb/tb_top/spi_interface.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/tb/agent/apb_slave/apb_agent_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/tb/agent/apb_slave/apb_driver_bfm.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/tb/agent/spi_master/spi_agent_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/tb/agent/spi_master/spi_driver_bfm.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/tb/sequence_lib/apb_sequences/apb_seq_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/tb/sequence_lib/spi_sequences/spi_seq_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/tb/sequence_lib/vseq_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/tb/env/apb2spi_env_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/tb/test_lib/apb2spi_test_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/husni/Projects/APB2SPI/tb/tb_top/tb_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_top

@@ -1,0 +1,19 @@
+-v /home/husni/Projects/APB2SPI/vietnam/tb/agent/apb_slave/apb_agent_pkg.sv
+-v /home/husni/Projects/APB2SPI/vietnam/tb/agent/spi_master/spi_agent_pkg.sv
+-v /home/husni/Projects/APB2SPI/vietnam/tb/env/apb2spi_env_pkg.sv
+-v /home/husni/Projects/APB2SPI/vietnam/tb/sequence_lib/apb2spi_seq_pkg.sv
+-v /home/husni/Projects/APB2SPI/vietnam/tb/test_lib/apb2spi_test_pkg.sv
++incdir+/home/husni/Projects/APB2SPI/vietnam/tb/agent/apb_slave
++incdir+/home/husni/Projects/APB2SPI/vietnam/tb/agent/spi_master
++incdir+/home/husni/Projects/APB2SPI/vietnam/tb/defines
++incdir+/home/husni/Projects/APB2SPI/vietnam/tb/env
++incdir+/home/husni/Projects/APB2SPI/vietnam/tb/sequence_lib
++incdir+/home/husni/Projects/APB2SPI/vietnam/tb/tb_top
++incdir+/home/husni/Projects/APB2SPI/vietnam/tb/test_lib
++incdir+/home/husni/Projects/APB2SPI/vietnam/tb/agent/apb_slave
++incdir+/home/husni/Projects/APB2SPI/vietnam/tb/agent/spi_master
++incdir+/home/husni/Projects/APB2SPI/vietnam/tb/defines
++incdir+/home/husni/Projects/APB2SPI/vietnam/tb/env
++incdir+/home/husni/Projects/APB2SPI/vietnam/tb/sequence_lib
++incdir+/home/husni/Projects/APB2SPI/vietnam/tb/tb_top
++incdir+/home/husni/Projects/APB2SPI/vietnam/tb/test_lib

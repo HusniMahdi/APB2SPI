@@ -1,0 +1,79 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Sun Jul  2 14:05:58 2023
+[*]
+[dumpfile] "/home/husni/Projects/APB2SPI/sim/dump.vcd"
+[dumpfile_mtime] "Sun Jul  2 14:04:17 2023"
+[dumpfile_size] 15067
+[savefile] "/home/husni/Projects/APB2SPI/sim/waveForm_Orgd.gtkw"
+[timestart] 0
+[size] 1920 1016
+[pos] -1 -1
+*-16.014061 78000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_top.
+[treeopen] tb_top.spi_driver_bfm.
+[sst_width] 233
+[signals_width] 407
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@28
+tb_top.apb_intf.PRESETN
+tb_top.apb_intf.PCLK
+tb_top.apb_intf.IRQ
+@200
+-
+-
+@28
+tb_top.apb_intf.PWRITE
+@22
+tb_top.apb_intf.PADDR[31:0]
+@28
+tb_top.apb_intf.PSEL
+tb_top.apb_intf.PENABLE
+tb_top.apb_intf.PREADY
+@22
+tb_top.apb_intf.PWDATA[31:0]
+tb_top.apb_intf.PRDATA[31:0]
+@200
+-
+-
+-
+@28
+tb_top.spi_driver_bfm.RX
+@29
+tb_top.spi_driver_bfm.TX
+@28
+tb_top.spi_driver_bfm.LSB
+@22
+tb_top.spi_driver_bfm.no_bits[6:0]
+tb_top.spi_driver_bfm.slave_data[127:0]
+@28
+tb_top.spi_intf.sclk_pad_o
+tb_top.spi_intf.miso_pad_i
+tb_top.spi_intf.mosi_pad_o
+@22
+tb_top.spi_intf.ss_pad_o[7:0]
+@200
+-
+-
+-
+@22
+tb_top.DUT.shift.data[127:0]
+@28
+tb_top.DUT.shift.go
+tb_top.DUT.shift.neg_edge
+tb_top.DUT.shift.pos_edge
+@22
+tb_top.DUT.shift.p_in[31:0]
+tb_top.DUT.shift.p_out[127:0]
+tb_top.DUT.shift.rx_bit_pos[7:0]
+@28
+tb_top.DUT.shift.rx_negedge
+tb_top.DUT.shift.rx_clk
+tb_top.DUT.shift.tx_clk
+tb_top.DUT.shift.tx_negedge
+@22
+tb_top.DUT.shift.tx_bit_pos[7:0]
+tb_top.DUT.shift.rx_bit_pos[7:0]
+[pattern_trace] 1
+[pattern_trace] 0
