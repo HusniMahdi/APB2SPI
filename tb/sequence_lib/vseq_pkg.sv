@@ -12,6 +12,7 @@ package vseq_pkg;
 	
 	`include "apb2spi_inputs_item.sv"
 	`include "vseq_base.sv"
+	`include "transfer_seq.sv"
 	`include "reset_test_seq.sv"
 	`include "transfer_test_seq.sv"
 	

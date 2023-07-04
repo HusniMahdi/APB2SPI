@@ -1,57 +1,39 @@
 class transfer_test_seq extends vseq_base;
   `uvm_object_utils(transfer_test_seq)
 
-
+  transfer_seq seq;
   int repeat_times;
 
+
   function new(string name = "transfer_test_seq");
-  super.new(name);
+    super.new(name);
   endfunction
 
   virtual task pre_body();
     super.pre_body();
+
+    seq = transfer_seq::type_id::create("TRANSFER SEQ");
+    seq.spi_sqncr = this.spi_sqncr;
+    seq.apb_sqncr = this.apb_sqncr;
+
   endtask
 
   virtual task body();
 
     reset();
 
-    repeat (5) begin
-      inputs_i.randomize();
-      complete_transfer (inputs_i);
-      apb_read_all();
-    end
+    // seq.randomize() with {
+    //   seq.REG_BLOCK[CTRL_R] == {ASS, IE, LSB_FIRST, TX_NEG, RX_NEG, BUSY, 8'd48};
+    //   seq.master_data == 'hFACE_AAAA_BBBB_CAFE;
+    //   seq.slave_data == 'hCCCC_DDDD_EEEE_FFFF;
+    //   seq.REG_BLOCK[DIV_R] == 2;
+    //   seq.REG_BLOCK[SS_R] == 2;      
+    // };
+    seq.randomize();
+    seq.start(null);
+
+    apb_read_all();
 
   endtask
-
-  task complete_transfer (apb2spi_inputs_item item);
-
-    apb_write(CTRL_REG, item.REG_BLOCK[CTRL_R]);
-    slave_ctrl.slave_data = item.slave_data;
-    slave_ctrl.REG_BLOCK[CTRL_R] = item.REG_BLOCK[CTRL_R];
-    slave_ctrl.start(spi_sqncr);
-    apb_write(DATA_REG, item.master_data);
-    apb_write(DIV_REG, item.REG_BLOCK[DIV_R]);
-    apb_write(SS_REG, item.REG_BLOCK[SS_R]);
-
-    item.REG_BLOCK[CTRL_R][8] = GO;
-    slave_ctrl.REG_BLOCK[CTRL_R] = item.REG_BLOCK[CTRL_R];
-    apb_write(CTRL_REG, item.REG_BLOCK[CTRL_R]);
-
-    fork
-      begin
-        apb_idle_for(item.REG_BLOCK[DIV_R], item.REG_BLOCK[CTRL_R][6:0]);
-        $display($time, " ns || [%s] APB Thread Ended", get_name());
-      end
-
-      begin
-        slave_ctrl.start(spi_sqncr);
-        $display($time, " ns || [%s] SPI Thread Ended", get_name());
-      end
-    join
-
-  endtask
-
-
 
 endclass

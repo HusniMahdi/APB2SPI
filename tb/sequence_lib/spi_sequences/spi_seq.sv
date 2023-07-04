@@ -3,9 +3,8 @@ class spi_seq extends uvm_sequence #(spi_seq_item);
     
     spi_seq_item item;
 
-    DATA slave_data;
-    SPI_REG_BLOCK REG_BLOCK;
-    
+    rand DATA slave_data;
+    rand SPI_REG_BLOCK REG_BLOCK;
         
     function new(string name = "spi_seq");
         super.new(name);

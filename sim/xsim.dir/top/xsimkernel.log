@@ -1,7 +1,7 @@
-Running: xsim.dir/top/xsimk -runall -simmode gui -testplusarg UVM_TESTNAME=apb2spi_transfer_test -testplusarg UVM_VERBOSITY=UVM_NONE -wdb top.wdb -simrunnum 0 -socket 42399
+Running: xsim.dir/top/xsimk -runall -simmode gui -testplusarg UVM_TESTNAME=apb2spi_transfer_test -testplusarg UVM_VERBOSITY=UVM_NONE -wdb top.wdb -simrunnum 0 -socket 52599
 Design successfully loaded
-Design Loading Memory Usage: 48948 KB (Peak: 48956 KB)
-Design Loading CPU Usage: 40 ms
+Design Loading Memory Usage: 48964 KB (Peak: 48964 KB)
+Design Loading CPU Usage: 20 ms
 Simulation completed
-Simulation Memory Usage: 178564 KB (Peak: 188216 KB)
-Simulation CPU Usage: 1820 ms
+Simulation Memory Usage: 162188 KB (Peak: 188232 KB)
+Simulation CPU Usage: 870 ms

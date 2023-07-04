@@ -11,7 +11,7 @@ class apb2spi_transfer_test extends apb2spi_base_test;
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     
-    seq = transfer_test_seq::type_id::create("RESET SEQ", this);
+    seq = transfer_test_seq::type_id::create("Transfer Test SEQ", this);
           
   endfunction
 

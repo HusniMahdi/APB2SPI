@@ -2,13 +2,13 @@
 # xsim v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue Jul  4 00:56:11 2023
-# Process ID: 45882
+# Start of session at: Tue Jul  4 19:27:09 2023
+# Process ID: 10139
 # Current directory: /home/husni/Projects/APB2SPI/sim
 # Command line: xsim -mode tcl -source {xsim.dir/top/xsim_script.tcl}
 # Log file: /home/husni/Projects/APB2SPI/sim/xsim.log
 # Journal file: /home/husni/Projects/APB2SPI/sim/xsim.jou
-# Running On: husni-Inspiron-3501, OS: Linux, CPU Frequency: 1417.787 MHz, CPU Physical cores: 4, Host memory: 16475 MB
+# Running On: husni-Inspiron-3501, OS: Linux, CPU Frequency: 519.632 MHz, CPU Physical cores: 4, Host memory: 16475 MB
 #-----------------------------------------------------------
 source xsim.dir/top/xsim_script.tcl
 run -all

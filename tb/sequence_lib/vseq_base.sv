@@ -10,11 +10,13 @@ class vseq_base extends uvm_sequence #(uvm_sequence_item);
   apb_read_seq  read_seq;
   apb_idle_seq  idle_seq;
 
-  apb2spi_inputs_item inputs_i;
+  rand apb2spi_inputs_item inputs_i;
 
-  spi_slave_tf_seq slv_tf_seq;
   spi_slave_ctrl_seq slave_ctrl;
 
+  rand SPI_REG_BLOCK REG_BLOCK;
+  rand REG_NAMES NAME;
+  rand DATA slave_data, master_data;
 
   function new(string name = "vseq_base");
   super.new(name);
@@ -28,7 +30,6 @@ class vseq_base extends uvm_sequence #(uvm_sequence_item);
     inputs_i = apb2spi_inputs_item::type_id::create("inputs_i");
 
     slave_ctrl = spi_slave_ctrl_seq::type_id::create("slave_ctrl");
-    slv_tf_seq = spi_slave_tf_seq::type_id::create("slv_tf_seq");
   endtask
 
   virtual task body();
