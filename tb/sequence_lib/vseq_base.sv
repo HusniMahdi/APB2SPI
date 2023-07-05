@@ -13,6 +13,7 @@ class vseq_base extends uvm_sequence #(uvm_sequence_item);
   rand apb2spi_inputs_item inputs_i;
 
   spi_slave_ctrl_seq slave_ctrl;
+  // spi_reg_assign_seq reg_assign;
 
   rand SPI_REG_BLOCK REG_BLOCK;
   rand REG_NAMES NAME;
@@ -30,56 +31,63 @@ class vseq_base extends uvm_sequence #(uvm_sequence_item);
     inputs_i = apb2spi_inputs_item::type_id::create("inputs_i");
 
     slave_ctrl = spi_slave_ctrl_seq::type_id::create("slave_ctrl");
+    // reg_assign = spi_reg_assign_seq::type_id::create("reg_assign");
+    // reg_assign.apb_sqncr = this.apb_sqncr;
   endtask
 
   virtual task body();
 
-    reset();
-
     // inputs_i.randomize() with {
-    //   inputs_i.REG_BLOCK[CTRL_R] == {ASS, IE, LSB, TX_NEG, RX_NEG, BUSY, 8'd48};
+    //   inputs_i.REG_BLOCK[CTRL_R] == {ASS, IE, LSB_FIRST, TX_NEG, RX_NEG, BUSY, 8'd48};
     //   inputs_i.master_data == 'hFACE_AAAA_BBBB_CAFE;
     //   inputs_i.slave_data == 'hCCCC_DDDD_EEEE_FFFF;
     //   inputs_i.REG_BLOCK[DIV_R] == 2;
     //   inputs_i.REG_BLOCK[SS_R] == 2;
     // };
 
-    // complete_transfer(inputs_i);
-
-    // apb_read_all();
-
-    // repeat (2) begin
-    //   inputs_i.randomize();
-    //   complete_transfer(inputs_i);
-    //   apb_read_all();        
-    // end
-
-
   endtask
-
 
   task reset();
     reset_seq.start(apb_sqncr);
   endtask
 
   task apb_write(ADDR_VALUE addr, DATA data);
-    write_seq.paddr = addr;
-    write_seq.pwdata  = data;
+    REG_NAMES NAME;
+    int no_bits = REG_BLOCK[CTRL_R][6:0]/32;
 
-    write_seq.start(apb_sqncr);
+    if (addr inside {[0:'h0C]}) begin
+      for (int i = 0; i <= no_bits; i++) begin
+        write_seq.paddr = addr+i*4;
+        $cast(NAME, addr+i*4);
+        write_seq.pwdata  = REG_BLOCK[NAME];
+        write_seq.start(apb_sqncr);
+      end
+    end
+
+    else begin
+      $cast(NAME, addr);
+      write_seq.paddr = addr;
+      write_seq.pwdata  = REG_BLOCK[NAME];
+      write_seq.start(apb_sqncr);
+    end
+
   endtask
+
+  // task apb_write(ADDR_VALUE addr, DATA data);
+  //   REG_NAMES NAME;
+  //   $cast(NAME, addr);
+  //   $display(`INFO "Written to %s REG of Address %0h with data %0h", NAME, addr, REG_BLOCK[NAME]);
+  //   write_seq.paddr = addr;
+  //   write_seq.pwdata  = REG_BLOCK[NAME];
+  //   write_seq.start(apb_sqncr);
+  // endtask
 
   task apb_read(ADDR_VALUE addr);
     read_seq.paddr = addr;
-
     read_seq.start(apb_sqncr);
   endtask
 
-  task apb_idle();
-    idle_seq.start(apb_sqncr);
-  endtask
-
-  task apb_idle_for(REG_VALUE div, no_bits);
+  task apb_idle_for(REG_VALUE div, bit [6:0]no_bits);
     int n = (div+1)*(2*no_bits +1);
     repeat(n) idle_seq.start(apb_sqncr);
   endtask

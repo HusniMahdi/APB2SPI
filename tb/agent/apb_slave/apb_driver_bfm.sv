@@ -22,7 +22,7 @@ apb_agent_config m_cfg;
 
 task drive (apb_seq_item item);
 
-  @(negedge PCLK)
+  // @(negedge PCLK)
   PRESETn <= item.presetn;
   PADDR <= item.paddr;
   PWDATA <= item.pdata;
@@ -37,6 +37,7 @@ task drive (apb_seq_item item);
       @(negedge PREADY);
     end
   end
+  @(negedge PCLK);
 
 endtask
 

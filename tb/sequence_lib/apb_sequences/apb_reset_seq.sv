@@ -13,6 +13,7 @@ class apb_reset_seq extends apb_seq;
     endfunction 
 
     virtual task body();
+        $display(`INFO " ==== Started ====");
 
         item = apb_seq_item::type_id::create("item");
         start_item(item);
@@ -26,6 +27,8 @@ class apb_reset_seq extends apb_seq;
         };
 
         finish_item(item);
+        
+        $display(`INFO " ==== ENDED ====");
 
     endtask
 

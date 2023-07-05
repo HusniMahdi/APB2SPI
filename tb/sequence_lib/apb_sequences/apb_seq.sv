@@ -3,7 +3,7 @@ class apb_seq extends uvm_sequence #(apb_seq_item);
     
     apb_seq_item item;
     
-    DATA                  pwdata;
+    REG_VALUE             pwdata;
     ADDR_VALUE            paddr;
     bit                   do_rand;
     bit                   rand_test = 0;

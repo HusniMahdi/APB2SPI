@@ -29,7 +29,7 @@ class apb2spi_transfer_test extends apb2spi_base_test;
   virtual task run_phase(uvm_phase phase);
     
     phase.raise_objection(this);    
-        seq.repeat_times = 2;    
+        seq.repeat_times = 10;    
         seq.start(null);        
         env.scb.scb_report();        
     phase.drop_objection(this);

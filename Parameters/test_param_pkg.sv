@@ -7,9 +7,9 @@ package test_param_pkg;
   parameter addrWidth = 32;
   parameter slvCount = 8;
 
-  typedef bit [dataWidth-1:0] REG_VALUE;
-  typedef bit [addrWidth-1:0] ADDR_VALUE;
-  typedef bit [(dataWidth*4)-1:0] DATA;
+  typedef logic [dataWidth-1:0] REG_VALUE;
+  typedef logic [addrWidth-1:0] ADDR_VALUE;
+  typedef logic [(dataWidth*4)-1:0] DATA;
 
   typedef enum {
     DATA_R0 = 'h00,

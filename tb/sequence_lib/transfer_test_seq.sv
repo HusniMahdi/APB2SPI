@@ -23,16 +23,31 @@ class transfer_test_seq extends vseq_base;
     reset();
 
     // seq.randomize() with {
-    //   seq.REG_BLOCK[CTRL_R] == {ASS, IE, LSB_FIRST, TX_NEG, RX_NEG, BUSY, 8'd48};
-    //   seq.master_data == 'hFACE_AAAA_BBBB_CAFE;
-    //   seq.slave_data == 'hCCCC_DDDD_EEEE_FFFF;
+    //   seq.REG_BLOCK[CTRL_R] == {ASS, IE, LSB_FIRST, TX_NEG, RX_NEG, BUSY, 8'd40};
+    //   // seq.REG_BLOCK[DATA_R0] == 'hBBBB_CAFE;
+    //   // seq.slave_data == 'hCCCC_DDDD_EEEE_FFFF;
     //   seq.REG_BLOCK[DIV_R] == 2;
-    //   seq.REG_BLOCK[SS_R] == 2;      
+    //   seq.REG_BLOCK[SS_R] == 2;
     // };
-    seq.randomize();
-    seq.start(null);
 
-    apb_read_all();
+    // $display(`INFO "Transfer Seq Randomized");
+    // $display ("REGISTER DATA_R0 Assigned data %h", seq.REG_BLOCK[DATA_R0]);
+    // $display ("REGISTER DATA_R1 Assigned data %h", seq.REG_BLOCK[DATA_R1]);
+    // $display ("REGISTER DATA_R2 Assigned data %h", seq.REG_BLOCK[DATA_R2]);
+    // $display ("REGISTER DATA_R3 Assigned data %h", seq.REG_BLOCK[DATA_R3]);
+    // $display ("REGISTER CTRL Assigned data %h", seq.REG_BLOCK[CTRL_R]);
+    // $display ("REGISTER DIV Assigned data %h", seq.REG_BLOCK[DIV_R]);
+    // $display ("REGISTER SS Assigned data %h", seq.REG_BLOCK[SS_R]);
+
+    // seq.start(null);
+    // apb_read_all();
+
+    repeat (repeat_times) begin
+      seq.randomize();
+      seq.start(null);
+      apb_read_all();
+
+    end
 
   endtask
 

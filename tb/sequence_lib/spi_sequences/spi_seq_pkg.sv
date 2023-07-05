@@ -7,6 +7,7 @@ package spi_seq_pkg;
 	
 	`include "spi_seq.sv"
 	`include "spi_slave_ctrl_seq.sv"
+	`include "spi_reg_assign_seq.sv"	
 	
 endpackage
 

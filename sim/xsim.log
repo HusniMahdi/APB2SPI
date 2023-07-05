@@ -2,13 +2,13 @@
 # xsim v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue Jul  4 19:27:09 2023
-# Process ID: 10139
+# Start of session at: Thu Jul  6 01:44:42 2023
+# Process ID: 34761
 # Current directory: /home/husni/Projects/APB2SPI/sim
 # Command line: xsim -mode tcl -source {xsim.dir/top/xsim_script.tcl}
 # Log file: /home/husni/Projects/APB2SPI/sim/xsim.log
 # Journal file: /home/husni/Projects/APB2SPI/sim/xsim.jou
-# Running On: husni-Inspiron-3501, OS: Linux, CPU Frequency: 519.632 MHz, CPU Physical cores: 4, Host memory: 16475 MB
+# Running On: husni-Inspiron-3501, OS: Linux, CPU Frequency: 620.098 MHz, CPU Physical cores: 4, Host memory: 16475 MB
 #-----------------------------------------------------------
 source xsim.dir/top/xsim_script.tcl
 # xsim {top} -testplusarg UVM_TESTNAME=apb2spi_transfer_test -testplusarg UVM_VERBOSITY=UVM_NONE -autoloadwcfg -runall
@@ -41,160 +41,884 @@ UVM_INFO /proj/xbuilds/SWIP/9999.0_0805_2155/installs/lin64/Vivado/2022.1/data/s
 UVM_INFO /proj/xbuilds/SWIP/9999.0_0805_2155/installs/lin64/Vivado/2022.1/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
 UVM_INFO /home/husni/Projects/APB2SPI/tb/agent/apb_slave/apb_driver_proxy.sv(30) @ 0: uvm_test_top.ENVIRONMENT.APB_AGENT.APB_DRVR [uvm_test_top.ENVIRONMENT.APB_AGENT.APB_DRVR] APB DRIVER RUN PHASE 
 
-                  15 ns || [APB_MNTR] APB RESETED
-                  15 ns || [PREDICTOR] Reseting Reg Values
-                  45 ns || [APB_MNTR]  APB WRITTEN Data :: 382d to Address :: 10
-                  75 ns || [APB_MNTR]  APB WRITTEN Data :: 10d2ef5f to Address :: 0
-                 105 ns || [APB_MNTR]  APB WRITTEN Data :: 90d0852d to Address :: 4
-                 135 ns || [APB_MNTR]  APB WRITTEN Data :: f to Address :: 14
-                 165 ns || [APB_MNTR]  APB WRITTEN Data :: 59 to Address :: 18
-                 195 ns || [APB_MNTR]  APB WRITTEN Data :: 392d to Address :: 10
-                 516 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+                   0 ns || [reset_seq]  ==== Started ====
+                   5 ns || [APB_MNTR] APB RESETED
+                   5 ns || [PREDICTOR] Reseting Reg Values
+                  10 ns || [reset_seq]  ==== ENDED ====
+                  10 ns || [TRANSFER SEQ]  ==== Started ====
+                  35 ns || [APB_MNTR]  APB WRITTEN Data :: 3810 to Address :: 10
+                  65 ns || [APB_MNTR]  APB WRITTEN Data :: f5c775c to Address :: 0
+                  95 ns || [APB_MNTR]  APB WRITTEN Data :: f to Address :: 14
+                 125 ns || [APB_MNTR]  APB WRITTEN Data :: 59 to Address :: 18
+                 155 ns || [APB_MNTR]  APB WRITTEN Data :: 3910 to Address :: 10
+                 476 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
 SPI PASSED
-                 836 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+                 796 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
 SPI PASSED
-                1156 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+                1116 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
 SPI PASSED
-                1476 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+                1436 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
 SPI PASSED
-                1796 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+                1756 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
 SPI PASSED
-                2116 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+                2076 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
 SPI PASSED
-                2436 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+                2396 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
 SPI PASSED
-                2756 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+                2716 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
 SPI PASSED
-                3076 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+                3036 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
 SPI PASSED
-                3396 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+                3356 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
 SPI PASSED
-                3716 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+                3676 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
 SPI PASSED
-                4036 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+                3996 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
 SPI PASSED
-                4356 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+                4316 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
 SPI PASSED
-                4676 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+                4636 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
 SPI PASSED
-                4996 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+                4956 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
 SPI PASSED
-                5316 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+                5276 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
 SPI PASSED
-                5636 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-                5956 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
-SPI PASSED
-                6276 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-                6596 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-                6916 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
-SPI PASSED
-                7236 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-                7556 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
-SPI PASSED
-                7876 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
-SPI PASSED
-                8196 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-                8516 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-                8836 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-                9156 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-                9476 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
-SPI PASSED
-                9796 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-               10116 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-               10436 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-               10756 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
-SPI PASSED
-               11076 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-               11396 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
-SPI PASSED
-               11716 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
-SPI PASSED
-               12036 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-               12356 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
-SPI PASSED
-               12676 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-               12996 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-               13316 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
-SPI PASSED
-               13636 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-               13956 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
-SPI PASSED
-               14276 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-               14596 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
-SPI PASSED
-               14596 ns || [TRANSFER SEQ] SPI Thread Ended
-               14750 ns || [TRANSFER SEQ] APB Thread Ended
-               14785 ns || [APB_MNTR]  APB READ Data :: f755abb2 from Address :: 0
-               14785 ns || [SCOREBOARD] Comparing DATA_R0 REG APB Read Data f755abb2 with Expected Data f755abb2
+                5276 ns || [TRANSFER SEQ] SPI Thread Ended
+                5440 ns || [TRANSFER SEQ] APB Thread Ended
+                5465 ns || [APB_MNTR]  APB READ Data :: f5cabb2 from Address :: 0
+                5465 ns || [SCOREBOARD] Comparing DATA_R0 REG APB Read Data f5cabb2 with Expected Data 0f5cabb2
 APB PASSED
-               14815 ns || [APB_MNTR]  APB READ Data :: 90d082cf from Address :: 4
-               14815 ns || [SCOREBOARD] Comparing DATA_R1 REG APB Read Data 90d082cf with Expected Data 90d082cf
+                5495 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: 4
+                5495 ns || [SCOREBOARD] Comparing DATA_R1 REG APB Read Data 0 with Expected Data 00000000
 APB PASSED
-               14845 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: 8
-               14845 ns || [SCOREBOARD] Comparing DATA_R2 REG APB Read Data 0 with Expected Data 00000000
+                5525 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: 8
+                5525 ns || [SCOREBOARD] Comparing DATA_R2 REG APB Read Data 0 with Expected Data 00000000
 APB PASSED
-               14875 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: c
-               14875 ns || [SCOREBOARD] Comparing DATA_R3 REG APB Read Data 0 with Expected Data 00000000
+                5555 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: c
+                5555 ns || [SCOREBOARD] Comparing DATA_R3 REG APB Read Data 0 with Expected Data 00000000
 APB PASSED
-               14905 ns || [APB_MNTR]  APB READ Data :: 382d from Address :: 10
-               14905 ns || [SCOREBOARD] Comparing CTRL_R REG APB Read Data 382d with Expected Data 0000382d
+                5585 ns || [APB_MNTR]  APB READ Data :: 3810 from Address :: 10
+                5585 ns || [SCOREBOARD] Comparing CTRL_R REG APB Read Data 3810 with Expected Data 00003810
 APB PASSED
-               14935 ns || [APB_MNTR]  APB READ Data :: f from Address :: 14
-               14935 ns || [SCOREBOARD] Comparing DIV_R REG APB Read Data f with Expected Data 0000000f
+                5615 ns || [APB_MNTR]  APB READ Data :: f from Address :: 14
+                5615 ns || [SCOREBOARD] Comparing DIV_R REG APB Read Data f with Expected Data 0000000f
 APB PASSED
-               14965 ns || [APB_MNTR]  APB READ Data :: 59 from Address :: 18
-               14965 ns || [SCOREBOARD] Comparing SS_R REG APB Read Data 59 with Expected Data 00000059
+                5645 ns || [APB_MNTR]  APB READ Data :: 59 from Address :: 18
+                5645 ns || [SCOREBOARD] Comparing SS_R REG APB Read Data 59 with Expected Data 00000059
 APB PASSED
-               14995 ns || [APB_MNTR]  APB READ Data :: f755abb2 from Address :: 0
-               14995 ns || [SCOREBOARD] Comparing DATA_R0 REG APB Read Data f755abb2 with Expected Data f755abb2
+                5650 ns || [TRANSFER SEQ]  ==== Started ====
+                5675 ns || [APB_MNTR]  APB WRITTEN Data :: 2031 to Address :: 10
+                5705 ns || [APB_MNTR]  APB WRITTEN Data :: fa9cc29d to Address :: 0
+                5735 ns || [APB_MNTR]  APB WRITTEN Data :: e564743f to Address :: 4
+                5765 ns || [APB_MNTR]  APB WRITTEN Data :: 0 to Address :: 14
+                5795 ns || [APB_MNTR]  APB WRITTEN Data :: 24 to Address :: 18
+                5825 ns || [APB_MNTR]  APB WRITTEN Data :: 2131 to Address :: 10
+                5846 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                5866 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                5886 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                5906 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                5926 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                5946 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                5966 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                5986 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6006 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6026 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6046 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6066 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6086 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6106 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6126 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6146 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6166 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6186 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6206 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6226 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6246 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6266 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6286 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6306 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6326 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6346 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6366 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6386 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6406 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6426 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6446 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6466 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6486 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6506 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6526 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6546 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6566 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6586 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6606 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6626 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6646 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6666 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6686 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6706 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6726 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6746 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6766 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6786 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                6806 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                6806 ns || [TRANSFER SEQ] SPI Thread Ended
+                6820 ns || [TRANSFER SEQ] APB Thread Ended
+                6845 ns || [APB_MNTR]  APB READ Data :: 1d331e11 from Address :: 0
+                6845 ns || [SCOREBOARD] Comparing DATA_R0 REG APB Read Data 1d331e11 with Expected Data 1d331e11
 APB PASSED
-               15025 ns || [APB_MNTR]  APB READ Data :: 90d082cf from Address :: 4
-               15025 ns || [SCOREBOARD] Comparing DATA_R1 REG APB Read Data 90d082cf with Expected Data 90d082cf
+                6875 ns || [APB_MNTR]  APB READ Data :: e5656df4 from Address :: 4
+                6875 ns || [SCOREBOARD] Comparing DATA_R1 REG APB Read Data e5656df4 with Expected Data e5656df4
 APB PASSED
-               15055 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: 8
-               15055 ns || [SCOREBOARD] Comparing DATA_R2 REG APB Read Data 0 with Expected Data 00000000
+                6905 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: 8
+                6905 ns || [SCOREBOARD] Comparing DATA_R2 REG APB Read Data 0 with Expected Data 00000000
 APB PASSED
-               15085 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: c
-               15085 ns || [SCOREBOARD] Comparing DATA_R3 REG APB Read Data 0 with Expected Data 00000000
+                6935 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: c
+                6935 ns || [SCOREBOARD] Comparing DATA_R3 REG APB Read Data 0 with Expected Data 00000000
 APB PASSED
-               15115 ns || [APB_MNTR]  APB READ Data :: 382d from Address :: 10
-               15115 ns || [SCOREBOARD] Comparing CTRL_R REG APB Read Data 382d with Expected Data 0000382d
+                6965 ns || [APB_MNTR]  APB READ Data :: 2031 from Address :: 10
+                6965 ns || [SCOREBOARD] Comparing CTRL_R REG APB Read Data 2031 with Expected Data 00002031
 APB PASSED
-               15145 ns || [APB_MNTR]  APB READ Data :: f from Address :: 14
-               15145 ns || [SCOREBOARD] Comparing DIV_R REG APB Read Data f with Expected Data 0000000f
+                6995 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: 14
+                6995 ns || [SCOREBOARD] Comparing DIV_R REG APB Read Data 0 with Expected Data 00000000
 APB PASSED
-               15175 ns || [APB_MNTR]  APB READ Data :: 59 from Address :: 18
-               15175 ns || [SCOREBOARD] Comparing SS_R REG APB Read Data 59 with Expected Data 00000059
+                7025 ns || [APB_MNTR]  APB READ Data :: 24 from Address :: 18
+                7025 ns || [SCOREBOARD] Comparing SS_R REG APB Read Data 24 with Expected Data 00000024
+APB PASSED
+                7030 ns || [TRANSFER SEQ]  ==== Started ====
+                7055 ns || [APB_MNTR]  APB WRITTEN Data :: e03 to Address :: 10
+                7085 ns || [APB_MNTR]  APB WRITTEN Data :: a8cfeaa to Address :: 0
+                7115 ns || [APB_MNTR]  APB WRITTEN Data :: a to Address :: 14
+                7145 ns || [APB_MNTR]  APB WRITTEN Data :: ae to Address :: 18
+                7175 ns || [APB_MNTR]  APB WRITTEN Data :: f03 to Address :: 10
+                7396 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                7616 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                7726 ns || [TRANSFER SEQ] SPI Thread Ended
+                7836 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                7950 ns || [TRANSFER SEQ] APB Thread Ended
+                7975 ns || [APB_MNTR]  APB READ Data :: a8cfeab from Address :: 0
+                7975 ns || [SCOREBOARD] Comparing DATA_R0 REG APB Read Data a8cfeab with Expected Data 0a8cfeab
+APB PASSED
+                8005 ns || [APB_MNTR]  APB READ Data :: e5656df4 from Address :: 4
+                8005 ns || [SCOREBOARD] Comparing DATA_R1 REG APB Read Data e5656df4 with Expected Data e5656df4
+APB PASSED
+                8035 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: 8
+                8035 ns || [SCOREBOARD] Comparing DATA_R2 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+                8065 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: c
+                8065 ns || [SCOREBOARD] Comparing DATA_R3 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+                8095 ns || [APB_MNTR]  APB READ Data :: e03 from Address :: 10
+                8095 ns || [SCOREBOARD] Comparing CTRL_R REG APB Read Data e03 with Expected Data 00000e03
+APB PASSED
+                8125 ns || [APB_MNTR]  APB READ Data :: a from Address :: 14
+                8125 ns || [SCOREBOARD] Comparing DIV_R REG APB Read Data a with Expected Data 0000000a
+APB PASSED
+                8155 ns || [APB_MNTR]  APB READ Data :: ae from Address :: 18
+                8155 ns || [SCOREBOARD] Comparing SS_R REG APB Read Data ae with Expected Data 000000ae
+APB PASSED
+                8160 ns || [TRANSFER SEQ]  ==== Started ====
+                8185 ns || [APB_MNTR]  APB WRITTEN Data :: 2a25 to Address :: 10
+                8215 ns || [APB_MNTR]  APB WRITTEN Data :: f48a7612 to Address :: 0
+                8245 ns || [APB_MNTR]  APB WRITTEN Data :: fa9b7d26 to Address :: 4
+                8275 ns || [APB_MNTR]  APB WRITTEN Data :: 9 to Address :: 14
+                8305 ns || [APB_MNTR]  APB WRITTEN Data :: 4 to Address :: 18
+                8335 ns || [APB_MNTR]  APB WRITTEN Data :: 2b25 to Address :: 10
+                8536 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                8736 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                8936 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                9136 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                9336 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+                9536 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                9736 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+                9936 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               10136 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               10336 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               10536 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               10736 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               10936 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               11136 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               11336 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               11536 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               11736 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               11936 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               12136 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               12336 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               12536 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               12736 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               12936 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               13136 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               13336 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               13536 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               13736 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               13936 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               14136 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               14336 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               14536 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               14736 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               14936 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               15136 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               15336 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               15536 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               15636 ns || [TRANSFER SEQ] SPI Thread Ended
+               15736 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               15840 ns || [TRANSFER SEQ] APB Thread Ended
+               15865 ns || [APB_MNTR]  APB READ Data :: 973d65b5 from Address :: 0
+               15865 ns || [SCOREBOARD] Comparing DATA_R0 REG APB Read Data 973d65b5 with Expected Data 973d65b5
+APB PASSED
+               15895 ns || [APB_MNTR]  APB READ Data :: fa9b7d2f from Address :: 4
+               15895 ns || [SCOREBOARD] Comparing DATA_R1 REG APB Read Data fa9b7d2f with Expected Data fa9b7d2f
+APB PASSED
+               15925 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: 8
+               15925 ns || [SCOREBOARD] Comparing DATA_R2 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+               15955 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: c
+               15955 ns || [SCOREBOARD] Comparing DATA_R3 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+               15985 ns || [APB_MNTR]  APB READ Data :: 2a25 from Address :: 10
+               15985 ns || [SCOREBOARD] Comparing CTRL_R REG APB Read Data 2a25 with Expected Data 00002a25
+APB PASSED
+               16015 ns || [APB_MNTR]  APB READ Data :: 9 from Address :: 14
+               16015 ns || [SCOREBOARD] Comparing DIV_R REG APB Read Data 9 with Expected Data 00000009
+APB PASSED
+               16045 ns || [APB_MNTR]  APB READ Data :: 4 from Address :: 18
+               16045 ns || [SCOREBOARD] Comparing SS_R REG APB Read Data 4 with Expected Data 00000004
+APB PASSED
+               16050 ns || [TRANSFER SEQ]  ==== Started ====
+               16075 ns || [APB_MNTR]  APB WRITTEN Data :: 1802 to Address :: 10
+               16105 ns || [APB_MNTR]  APB WRITTEN Data :: 8978ddb3 to Address :: 0
+               16135 ns || [APB_MNTR]  APB WRITTEN Data :: 3 to Address :: 14
+               16165 ns || [APB_MNTR]  APB WRITTEN Data :: 6e to Address :: 18
+               16195 ns || [APB_MNTR]  APB WRITTEN Data :: 1902 to Address :: 10
+               16276 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               16356 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               16356 ns || [TRANSFER SEQ] SPI Thread Ended
+               16400 ns || [TRANSFER SEQ] APB Thread Ended
+               16425 ns || [APB_MNTR]  APB READ Data :: 8978ddb0 from Address :: 0
+               16425 ns || [SCOREBOARD] Comparing DATA_R0 REG APB Read Data 8978ddb0 with Expected Data 8978ddb0
+APB PASSED
+               16455 ns || [APB_MNTR]  APB READ Data :: fa9b7d2f from Address :: 4
+               16455 ns || [SCOREBOARD] Comparing DATA_R1 REG APB Read Data fa9b7d2f with Expected Data fa9b7d2f
+APB PASSED
+               16485 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: 8
+               16485 ns || [SCOREBOARD] Comparing DATA_R2 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+               16515 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: c
+               16515 ns || [SCOREBOARD] Comparing DATA_R3 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+               16545 ns || [APB_MNTR]  APB READ Data :: 1802 from Address :: 10
+               16545 ns || [SCOREBOARD] Comparing CTRL_R REG APB Read Data 1802 with Expected Data 00001802
+APB PASSED
+               16575 ns || [APB_MNTR]  APB READ Data :: 3 from Address :: 14
+               16575 ns || [SCOREBOARD] Comparing DIV_R REG APB Read Data 3 with Expected Data 00000003
+APB PASSED
+               16605 ns || [APB_MNTR]  APB READ Data :: 6e from Address :: 18
+               16605 ns || [SCOREBOARD] Comparing SS_R REG APB Read Data 6e with Expected Data 0000006e
+APB PASSED
+               16610 ns || [TRANSFER SEQ]  ==== Started ====
+               16635 ns || [APB_MNTR]  APB WRITTEN Data :: 1a22 to Address :: 10
+               16665 ns || [APB_MNTR]  APB WRITTEN Data :: f5056da8 to Address :: 0
+               16695 ns || [APB_MNTR]  APB WRITTEN Data :: c49c7a54 to Address :: 4
+               16725 ns || [APB_MNTR]  APB WRITTEN Data :: f to Address :: 14
+               16755 ns || [APB_MNTR]  APB WRITTEN Data :: b3 to Address :: 18
+               16785 ns || [APB_MNTR]  APB WRITTEN Data :: 1b22 to Address :: 10
+               17106 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               17426 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               17746 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               18066 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               18386 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               18706 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               19026 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               19346 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               19666 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               19986 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               20306 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               20626 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               20946 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               21266 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               21586 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               21906 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               22226 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               22546 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               22866 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               23186 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               23506 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               23826 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               24146 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               24466 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               24786 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               25106 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               25426 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               25746 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               26066 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               26386 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               26706 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               27026 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               27346 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               27506 ns || [TRANSFER SEQ] SPI Thread Ended
+               27666 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               27830 ns || [TRANSFER SEQ] APB Thread Ended
+               27855 ns || [APB_MNTR]  APB READ Data :: b5049656 from Address :: 0
+               27855 ns || [SCOREBOARD] Comparing DATA_R0 REG APB Read Data b5049656 with Expected Data b5049656
+APB PASSED
+               27885 ns || [APB_MNTR]  APB READ Data :: c49c7a56 from Address :: 4
+               27885 ns || [SCOREBOARD] Comparing DATA_R1 REG APB Read Data c49c7a56 with Expected Data c49c7a56
+APB PASSED
+               27915 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: 8
+               27915 ns || [SCOREBOARD] Comparing DATA_R2 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+               27945 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: c
+               27945 ns || [SCOREBOARD] Comparing DATA_R3 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+               27975 ns || [APB_MNTR]  APB READ Data :: 1a22 from Address :: 10
+               27975 ns || [SCOREBOARD] Comparing CTRL_R REG APB Read Data 1a22 with Expected Data 00001a22
+APB PASSED
+               28005 ns || [APB_MNTR]  APB READ Data :: f from Address :: 14
+               28005 ns || [SCOREBOARD] Comparing DIV_R REG APB Read Data f with Expected Data 0000000f
+APB PASSED
+               28035 ns || [APB_MNTR]  APB READ Data :: b3 from Address :: 18
+               28035 ns || [SCOREBOARD] Comparing SS_R REG APB Read Data b3 with Expected Data 000000b3
+APB PASSED
+               28040 ns || [TRANSFER SEQ]  ==== Started ====
+               28065 ns || [APB_MNTR]  APB WRITTEN Data :: c13 to Address :: 10
+               28095 ns || [APB_MNTR]  APB WRITTEN Data :: 4f1d19d to Address :: 0
+               28125 ns || [APB_MNTR]  APB WRITTEN Data :: 2 to Address :: 14
+               28155 ns || [APB_MNTR]  APB WRITTEN Data :: 6f to Address :: 18
+               28185 ns || [APB_MNTR]  APB WRITTEN Data :: d13 to Address :: 10
+               28246 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               28306 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               28366 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               28426 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               28486 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               28546 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               28606 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               28666 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               28726 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               28786 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               28846 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               28906 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               28966 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               29026 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               29086 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               29146 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               29206 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               29266 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               29326 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               29326 ns || [TRANSFER SEQ] SPI Thread Ended
+               29360 ns || [TRANSFER SEQ] APB Thread Ended
+               29385 ns || [APB_MNTR]  APB READ Data :: 4f014f0 from Address :: 0
+               29385 ns || [SCOREBOARD] Comparing DATA_R0 REG APB Read Data 4f014f0 with Expected Data 04f014f0
+APB PASSED
+               29415 ns || [APB_MNTR]  APB READ Data :: c49c7a56 from Address :: 4
+               29415 ns || [SCOREBOARD] Comparing DATA_R1 REG APB Read Data c49c7a56 with Expected Data c49c7a56
+APB PASSED
+               29445 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: 8
+               29445 ns || [SCOREBOARD] Comparing DATA_R2 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+               29475 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: c
+               29475 ns || [SCOREBOARD] Comparing DATA_R3 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+               29505 ns || [APB_MNTR]  APB READ Data :: c13 from Address :: 10
+               29505 ns || [SCOREBOARD] Comparing CTRL_R REG APB Read Data c13 with Expected Data 00000c13
+APB PASSED
+               29535 ns || [APB_MNTR]  APB READ Data :: 2 from Address :: 14
+               29535 ns || [SCOREBOARD] Comparing DIV_R REG APB Read Data 2 with Expected Data 00000002
+APB PASSED
+               29565 ns || [APB_MNTR]  APB READ Data :: 6f from Address :: 18
+               29565 ns || [SCOREBOARD] Comparing SS_R REG APB Read Data 6f with Expected Data 0000006f
+APB PASSED
+               29570 ns || [TRANSFER SEQ]  ==== Started ====
+               29595 ns || [APB_MNTR]  APB WRITTEN Data :: 2024 to Address :: 10
+               29625 ns || [APB_MNTR]  APB WRITTEN Data :: 8f6e4435 to Address :: 0
+               29655 ns || [APB_MNTR]  APB WRITTEN Data :: dc6075b3 to Address :: 4
+               29685 ns || [APB_MNTR]  APB WRITTEN Data :: 8 to Address :: 14
+               29715 ns || [APB_MNTR]  APB WRITTEN Data :: d0 to Address :: 18
+               29745 ns || [APB_MNTR]  APB WRITTEN Data :: 2124 to Address :: 10
+               29926 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               30106 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               30286 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               30466 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               30646 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               30826 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               31006 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               31186 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               31366 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               31546 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               31726 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               31906 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               32086 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               32266 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               32446 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               32626 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               32806 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               32986 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               33166 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               33346 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               33526 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               33706 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               33886 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               34066 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               34246 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               34426 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               34606 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               34786 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               34966 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               35146 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               35326 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               35506 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               35686 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               35866 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               36046 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               36226 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               36226 ns || [TRANSFER SEQ] SPI Thread Ended
+               36320 ns || [TRANSFER SEQ] APB Thread Ended
+               36345 ns || [APB_MNTR]  APB READ Data :: 337b0db4 from Address :: 0
+               36345 ns || [SCOREBOARD] Comparing DATA_R0 REG APB Read Data 337b0db4 with Expected Data 337b0db4
+APB PASSED
+               36375 ns || [APB_MNTR]  APB READ Data :: dc6075b2 from Address :: 4
+               36375 ns || [SCOREBOARD] Comparing DATA_R1 REG APB Read Data dc6075b2 with Expected Data dc6075b2
+APB PASSED
+               36405 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: 8
+               36405 ns || [SCOREBOARD] Comparing DATA_R2 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+               36435 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: c
+               36435 ns || [SCOREBOARD] Comparing DATA_R3 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+               36465 ns || [APB_MNTR]  APB READ Data :: 2024 from Address :: 10
+               36465 ns || [SCOREBOARD] Comparing CTRL_R REG APB Read Data 2024 with Expected Data 00002024
+APB PASSED
+               36495 ns || [APB_MNTR]  APB READ Data :: 8 from Address :: 14
+               36495 ns || [SCOREBOARD] Comparing DIV_R REG APB Read Data 8 with Expected Data 00000008
+APB PASSED
+               36525 ns || [APB_MNTR]  APB READ Data :: d0 from Address :: 18
+               36525 ns || [SCOREBOARD] Comparing SS_R REG APB Read Data d0 with Expected Data 000000d0
+APB PASSED
+               36530 ns || [TRANSFER SEQ]  ==== Started ====
+               36555 ns || [APB_MNTR]  APB WRITTEN Data :: 2029 to Address :: 10
+               36585 ns || [APB_MNTR]  APB WRITTEN Data :: b1bed078 to Address :: 0
+               36615 ns || [APB_MNTR]  APB WRITTEN Data :: 3041c4b4 to Address :: 4
+               36645 ns || [APB_MNTR]  APB WRITTEN Data :: 5 to Address :: 14
+               36675 ns || [APB_MNTR]  APB WRITTEN Data :: 8b to Address :: 18
+               36705 ns || [APB_MNTR]  APB WRITTEN Data :: 2129 to Address :: 10
+               36826 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               36946 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               37066 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               37186 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               37306 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               37426 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               37546 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               37666 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               37786 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               37906 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               38026 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               38146 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               38266 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               38386 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               38506 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               38626 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               38746 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               38866 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               38986 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               39106 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               39226 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               39346 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               39466 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               39586 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               39706 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               39826 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               39946 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               40066 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               40186 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               40306 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               40426 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               40546 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               40666 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               40786 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               40906 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               41026 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               41146 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               41266 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               41386 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               41506 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               41626 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               41626 ns || [TRANSFER SEQ] SPI Thread Ended
+               41690 ns || [TRANSFER SEQ] APB Thread Ended
+               41715 ns || [APB_MNTR]  APB READ Data :: fae85d5a from Address :: 0
+               41715 ns || [SCOREBOARD] Comparing DATA_R0 REG APB Read Data fae85d5a with Expected Data fae85d5a
+APB PASSED
+               41745 ns || [APB_MNTR]  APB READ Data :: 3041c5e8 from Address :: 4
+               41745 ns || [SCOREBOARD] Comparing DATA_R1 REG APB Read Data 3041c5e8 with Expected Data 3041c5e8
+APB PASSED
+               41775 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: 8
+               41775 ns || [SCOREBOARD] Comparing DATA_R2 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+               41805 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: c
+               41805 ns || [SCOREBOARD] Comparing DATA_R3 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+               41835 ns || [APB_MNTR]  APB READ Data :: 2029 from Address :: 10
+               41835 ns || [SCOREBOARD] Comparing CTRL_R REG APB Read Data 2029 with Expected Data 00002029
+APB PASSED
+               41865 ns || [APB_MNTR]  APB READ Data :: 5 from Address :: 14
+               41865 ns || [SCOREBOARD] Comparing DIV_R REG APB Read Data 5 with Expected Data 00000005
+APB PASSED
+               41895 ns || [APB_MNTR]  APB READ Data :: 8b from Address :: 18
+               41895 ns || [SCOREBOARD] Comparing SS_R REG APB Read Data 8b with Expected Data 0000008b
+APB PASSED
+               41900 ns || [TRANSFER SEQ]  ==== Started ====
+               41925 ns || [APB_MNTR]  APB WRITTEN Data :: 102e to Address :: 10
+               41955 ns || [APB_MNTR]  APB WRITTEN Data :: f862c270 to Address :: 0
+               41985 ns || [APB_MNTR]  APB WRITTEN Data :: e9b4926b to Address :: 4
+               42015 ns || [APB_MNTR]  APB WRITTEN Data :: b to Address :: 14
+               42045 ns || [APB_MNTR]  APB WRITTEN Data :: dc to Address :: 18
+               42075 ns || [APB_MNTR]  APB WRITTEN Data :: 112e to Address :: 10
+               42316 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               42556 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               42796 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               43036 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               43276 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               43516 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               43756 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               43996 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               44236 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               44476 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               44716 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               44956 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               45196 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               45436 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               45676 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               45916 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               46156 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               46396 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               46636 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               46876 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               47116 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               47356 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               47596 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               47836 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               48076 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               48316 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               48556 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               48796 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               49036 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               49276 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               49516 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               49756 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               49996 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               50236 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               50476 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               50716 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               50956 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               51196 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               51436 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               51676 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               51916 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               52156 ns || [SCOREBOARD] Comparing MOSI Read Bit 1 with Expected Bit 1
+SPI PASSED
+               52396 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               52636 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               52876 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               53116 ns || [SCOREBOARD] Comparing MOSI Read Bit 0 with Expected Bit 0
+SPI PASSED
+               53116 ns || [TRANSFER SEQ] SPI Thread Ended
+               53240 ns || [TRANSFER SEQ] APB Thread Ended
+               53265 ns || [APB_MNTR]  APB READ Data :: 95ae70ad from Address :: 0
+               53265 ns || [SCOREBOARD] Comparing DATA_R0 REG APB Read Data 95ae70ad with Expected Data 95ae70ad
+APB PASSED
+               53295 ns || [APB_MNTR]  APB READ Data :: e9b49842 from Address :: 4
+               53295 ns || [SCOREBOARD] Comparing DATA_R1 REG APB Read Data e9b49842 with Expected Data e9b49842
+APB PASSED
+               53325 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: 8
+               53325 ns || [SCOREBOARD] Comparing DATA_R2 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+               53355 ns || [APB_MNTR]  APB READ Data :: 0 from Address :: c
+               53355 ns || [SCOREBOARD] Comparing DATA_R3 REG APB Read Data 0 with Expected Data 00000000
+APB PASSED
+               53385 ns || [APB_MNTR]  APB READ Data :: 102e from Address :: 10
+               53385 ns || [SCOREBOARD] Comparing CTRL_R REG APB Read Data 102e with Expected Data 0000102e
+APB PASSED
+               53415 ns || [APB_MNTR]  APB READ Data :: b from Address :: 14
+               53415 ns || [SCOREBOARD] Comparing DIV_R REG APB Read Data b with Expected Data 0000000b
+APB PASSED
+               53445 ns || [APB_MNTR]  APB READ Data :: dc from Address :: 18
+               53445 ns || [SCOREBOARD] Comparing SS_R REG APB Read Data dc with Expected Data 000000dc
 APB PASSED
 
  
  ===================================       SCOREBOARD REPORT       =================================== 
 
- ********* Total APB Tests          14 || Passed          14 || Failed           0 ||  ********* 
+ ********* Total APB Tests          70 || Passed          70 || Failed           0 ||  ********* 
 
- ********* Total SPI Tests          45 || Passed          45 || Failed           0 ||  ********* 
+ ********* Total SPI Tests         283 || Passed         283 || Failed           0 ||  ********* 
 
 
  ===================================       END       =================================== 
  
 
-$finish called at time : 15176 ns : File "/tools/Xilinx/Vivado/2021.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+$finish called at time : 53450 ns : File "/tools/Xilinx/Vivado/2021.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Tue Jul  4 19:27:16 2023...
+INFO: [Common 17-206] Exiting xsim at Thu Jul  6 01:44:52 2023...

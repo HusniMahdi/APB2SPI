@@ -73,7 +73,7 @@ class apb2spi_scb extends uvm_scoreboard;
 		read_mosi_bit = spi_read_item.mosi_negedge*!TX + spi_read_item.mosi_posedge*TX;
 
 		$display (`INFO "Comparing MOSI Read Bit %b with Expected Bit %b", read_mosi_bit, prd_item.expected_mosi_bit);
-		if (prd_item.expected_mosi_bit == read_mosi_bit) begin
+		if (prd_item.expected_mosi_bit === read_mosi_bit) begin
 			$display("SPI PASSED");
 			SPI_Passed++;
 		end
